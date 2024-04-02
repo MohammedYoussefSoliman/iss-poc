@@ -20,6 +20,11 @@ module.exports = {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"],
     },
+    "import/resolver": {
+      typescript: {},
+    },
+    "import/internal-regex":
+      "(@layouts|@components|@hooks|@providers|@assets|@locales)(/.+)?",
   },
   rules: {
     "react-refresh/only-export-components": [

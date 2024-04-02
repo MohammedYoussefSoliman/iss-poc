@@ -1,5 +1,7 @@
+import { Providers } from "@providers";
+
 const App = () => {
-  return <div>app</div>;
+  return <Providers />;
 };
 
 export default App;
