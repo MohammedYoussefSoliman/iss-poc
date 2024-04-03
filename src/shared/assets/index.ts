@@ -1,1 +1,1 @@
-export const assets = "assets";
+export const assets = 'assets';

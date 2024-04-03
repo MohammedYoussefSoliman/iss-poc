@@ -1,5 +1,5 @@
 const locale = {
-  dashboard: "لوحة التحكم",
+  dashboard: 'لوحة التحكم',
 };
 
 export default locale;

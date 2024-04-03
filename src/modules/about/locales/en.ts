@@ -1,5 +1,5 @@
 const locale = {
-  about: "about us",
+  about: 'about us',
 };
 
 export default locale;

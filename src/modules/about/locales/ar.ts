@@ -1,5 +1,5 @@
 const locale = {
-  about: "من نحن",
+  about: 'من نحن',
 };
 
 export default locale;

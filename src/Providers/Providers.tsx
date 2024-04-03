@@ -1,10 +1,10 @@
-import { Provider as ReduxProvider } from "react-redux";
-import { PersistGate } from "redux-persist/integration/react";
+import { Provider as ReduxProvider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import { store, persister } from "@state";
-import "@locales";
+import { store, persister } from '@state';
+import '@locales';
 
-import AppSetup from "./AppSetup";
+import AppSetup from './AppSetup';
 
 const Providers = () => {
   return (
