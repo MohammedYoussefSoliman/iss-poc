@@ -1,10 +1,9 @@
 import { ModuleRoute } from '@shared/common.types';
 
 export const route: ModuleRoute = {
-  index: true,
-  roles: ['user'],
+  path: 'login',
   lazy: async () => {
-    const Page = await import('./homePage');
+    const Page = await import('./loginPage');
     return { Component: Page.default };
   },
 };

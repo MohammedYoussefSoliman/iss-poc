@@ -1,7 +1,10 @@
 import { RouteObject } from 'react-router-dom';
 
-export type LayoutType = 'normal' | 'empty' | 'headless' | 'footless';
+export type RoleType = 'user' | 'public' | '*';
 
 export type ModuleRoute = RouteObject & {
-  layout?: LayoutType;
+  roles?: string[];
+};
+export type SingleRoleModuleRoute = RouteObject & {
+  role: string;
 };

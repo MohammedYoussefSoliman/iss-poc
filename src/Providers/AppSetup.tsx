@@ -15,7 +15,7 @@ const AppSetup = () => {
     ui: { language },
   } = useAppSelector((state) => state);
 
-  const router = useAppRoutes({ layout: 'normal', routes });
+  const router = useAppRoutes({ routes });
 
   useEffect(() => {
     changeLanguage(language);

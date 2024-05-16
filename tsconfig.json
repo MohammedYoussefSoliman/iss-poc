@@ -30,9 +30,11 @@
       "@modules/*": ["src/modules/*"],
       "@modules": ["src/modules"],
       "@hooks": ["./src/shared/hooks"],
+      "@constants": ["./src/shared/constants"],
       "@shared/*": ["./src/shared/*"],
       "@layouts": ["./src/shared/layouts"],
-      "@components": ["./src/shared/components"]
+      "@components": ["./src/shared/components"],
+      "@util/*": ["./src/shared/utils/*"]
     }
   },
   "include": ["src"],

@@ -1,10 +1,11 @@
-import { Outlet } from 'react-router-dom';
+import { LayoutProps } from './layout.types';
 
-const NormalLayout = () => {
+const NormalLayout = ({ children }: LayoutProps) => {
   return (
     <main>
-      normal layout
-      <Outlet />
+      <header>app header</header>
+      {children}
+      <footer>app footer</footer>
     </main>
   );
 };

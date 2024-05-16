@@ -1,12 +1,12 @@
-import { Outlet } from 'react-router-dom';
+import { LayoutProps } from './layout.types';
 
-const NormalLayout = () => {
+const EmptyLayout = ({ children }: LayoutProps) => {
   return (
     <main>
       empty layout
-      <Outlet />
+      {children}
     </main>
   );
 };
 
-export default NormalLayout;
+export default EmptyLayout;

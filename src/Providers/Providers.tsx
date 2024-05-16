@@ -1,3 +1,4 @@
+import { CookiesProvider } from 'react-cookie';
 import { Provider as ReduxProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
@@ -13,7 +14,9 @@ const Providers = () => {
         loading={<span>loading persisted Data</span>}
         persistor={persister}
       >
-        <AppSetup />
+        <CookiesProvider>
+          <AppSetup />
+        </CookiesProvider>
       </PersistGate>
     </ReduxProvider>
   );

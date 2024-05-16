@@ -5,10 +5,12 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
 // Slices
+import { authReducer } from './auth';
 import { uiReducer } from './ui';
 
 const rootReducer = combineReducers({
   ui: uiReducer,
+  auth: authReducer,
 });
 
 const persistConfig = {
@@ -42,3 +44,4 @@ export type AppDispatch = typeof store.dispatch;
 
 //export actions
 export * from './ui';
+export * from './auth';

@@ -25,7 +25,7 @@ module.exports = {
       typescript: {},
     },
     'import/internal-regex':
-      '(@layouts|@components|@hooks|@providers|@assets|@locales)(/.+)?',
+      '(@layouts|@components|@hooks|@providers|@assets|@locales|@constants)(/.+)?',
   },
   rules: {
     'import/named': 'error',
@@ -40,6 +40,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'no-console': 'error',
     'import/order': [
       'error',
       {
