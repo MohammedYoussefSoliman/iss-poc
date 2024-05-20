@@ -34,7 +34,8 @@
       "@shared/*": ["./src/shared/*"],
       "@layouts": ["./src/shared/layouts"],
       "@components": ["./src/shared/components"],
-      "@util/*": ["./src/shared/utils/*"]
+      "@utils/*": ["./src/shared/utils/*"],
+      "@utils": ["./src/shared/utils"]
     }
   },
   "include": ["src"],

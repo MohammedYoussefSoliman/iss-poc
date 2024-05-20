@@ -25,7 +25,7 @@ module.exports = {
       typescript: {},
     },
     'import/internal-regex':
-      '(@layouts|@components|@hooks|@providers|@assets|@locales|@constants)(/.+)?',
+      '(@layouts|@components|@hooks|@providers|@assets|@locales|@constants|@utils)(/.+)?',
   },
   rules: {
     'import/named': 'error',

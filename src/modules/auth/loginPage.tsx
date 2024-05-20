@@ -1,14 +1,14 @@
 import { useEffect, useMemo } from 'react';
 
-import Keycloak from 'keycloak-js';
-import { useCookies } from 'react-cookie';
+// import { useCookies } from 'react-cookie';
 
 import { useAppDispatch, useAuth } from '@hooks';
 import { login } from '@state';
+import { Keycloak } from '@utils';
 
 const LoginPage = () => {
   const dispatch = useAppDispatch();
-  const [cookies, setKeycloakCookies] = useCookies(['keycloak']);
+  // const [cookies, setKeycloakCookies] = useCookies(['keycloak']);
   const { loggedIn } = useAuth();
 
   /**
@@ -18,24 +18,20 @@ const LoginPage = () => {
    * setKeycloakCookies('keycloak', response.data.cookies)
    */
 
-  setKeycloakCookies('keycloak', {
-    url: import.meta.env.VITE_KEYCLOAK_URL,
-    realm: import.meta.env.VITE_KEYCLOAK_REALM,
-    clientId: import.meta.env.VITE_KEYCLOAK_CLIENT,
-  });
+  // setKeycloakCookies('keycloak', {
+  //   url: import.meta.env.VITE_KEYCLOAK_URL,
+  //   realm: import.meta.env.VITE_KEYCLOAK_REALM,
+  //   clientId: import.meta.env.VITE_KEYCLOAK_CLIENT,
+  // });
 
-  const client = useMemo(() => {
-    if (cookies.keycloak) {
-      return new Keycloak(cookies.keycloak);
-    }
-    return null;
-  }, [cookies]);
+  const client = useMemo(() => Keycloak.getKeycloak(), []);
 
   useEffect(() => {
-    if (!loggedIn && client) {
+    if (!loggedIn) {
       client
         .init({
           onLoad: 'login-required',
+          // redirectUri: 'http://localhost:5173/',
         })
         .then(() => {
           if (client.token) {
@@ -53,13 +49,12 @@ const LoginPage = () => {
               }),
             );
           }
+          window.location.replace('/');
         });
     }
   }, [client, dispatch, loggedIn]);
 
-  if (!client) return <div>loading...</div>;
-
-  return <div>loading...</div>;
+  return <div>login...</div>;
 };
 
 export default LoginPage;

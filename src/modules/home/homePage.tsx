@@ -1,5 +1,14 @@
+import { useAuth } from '@hooks';
+
 const HomePage = () => {
-  return <div>home</div>;
+  const { logout } = useAuth();
+
+  return (
+    <div>
+      home
+      <button onClick={logout}>logout</button>
+    </div>
+  );
 };
 
 export default HomePage;

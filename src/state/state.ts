@@ -16,7 +16,7 @@ const rootReducer = combineReducers({
 const persistConfig = {
   key: 'iis-storage',
   storage,
-  whitelist: ['ui'],
+  whitelist: ['ui', 'auth'],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
